@@ -12,9 +12,9 @@ python:
 #   allow_failures:
 #       - python: 3.7
 
-before_script:
-    - pip install -U pipenv
-    - pipenv install --dev
+# before_script:
+#     - pip install -U pipenv
+#     - pipenv install --dev
 
 jobs:
     - stage: lint
@@ -25,4 +25,4 @@ jobs:
       script:
         - python -c "import os; print(os.stat_float_times())"
 
-script: echo 0
+# script: echo 0
