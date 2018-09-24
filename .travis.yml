@@ -9,11 +9,11 @@ matrix:
   allow_failures:
       - python: 3.7
 
-before_script:
-    - pip install -U pipenv
-    - pipenv install --dev
-
 jobs:
+    - stage: install dependencies
+      scrpit:
+        - pip install -U pipenv
+        - pipenv install --dev
     - stage: lint
       script:
           - isort -c
