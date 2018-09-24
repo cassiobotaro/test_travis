@@ -17,12 +17,9 @@ language: python
 #     - pipenv install --dev
 
 jobs:
-    - stage: lint
-      script:
-          - isort -c
-          - flake8
-    - stage: test
-      script:
-        - python -c "import os; print(os.stat_float_times())"
+  - stage: lint
+    script: flake8
+  - stage: test
+    script: python -c "import os; print(os.stat_float_times())"
 
 # script: echo 0
