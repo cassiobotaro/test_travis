@@ -1,0 +1,13 @@
+language: python
+
+matrix:
+  include:
+    - python: 3.6
+    - python: 3.7
+      dist: xenial
+      sudo: true
+  allow_failures:
+      - python: 3.7
+
+script:
+    - python -c "import os; print(os.stat_float_times())"
