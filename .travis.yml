@@ -19,7 +19,9 @@ before_script:
 jobs:
   include:
     - stage: lint
-      script: flake8
+      script:
+        - flake8
+        - isort -c
     - stage: test
       script: python -c "import os; print(os.stat_float_times())"
 
