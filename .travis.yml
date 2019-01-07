@@ -17,7 +17,7 @@ cache: pip
 before_script:
   - pip install -U pipenv
   - pipenv install --dev
-
+install: true
 jobs:
   include:
     - stage: lint
